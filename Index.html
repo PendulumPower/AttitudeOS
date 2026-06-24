@@ -7,25 +7,34 @@
         background-color: #8f8f8f;
         font-family: URW Chancery L, cursive;
       }
-
-      h1 {
-        margin: 3px;
-      }
-
-      img {
-        width: 120px;
-        height: 120px;
-        border-radius: 10px;
-        object-fit: cover;
-      }
     </style>
   </head>
 
-  <body style="background-image: url(./Images/DefaultBackground.jpg);"">
+  <body style="background-image: url(./Images/DefaultBackground.jpg); margin: 0;"">
+    <div style="position: absolute; width: 100%; display: flex; background-color: rgba(0, 0, 0, 0.25); 
+     color: #fff; justify-content: space-between; backdrop-filter: blur(6px);
+">
+      <p style="margin-left: 16px;">
+            AttitudeOS
+        </p> 
+        <p style="margin-right: 16px;">
+            <span id="clock">Loading...</span>
+             <script>
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString(); 
+            document.getElementById("clock").textContent = timeString;
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+        </p>
+    </div>
+
     <div style="border: 4mm ridge rgba(48, 48, 48, 0.6); width: fit-content;
      border-radius: 16px; padding: 5px; position: absolute; top: 50%; left: 50%; 
-     transform: translate(-50%, -50%); text-align: center;" background-color: rgb(85, 85, 98);>
-    <h1>Welcome to AttitudeOS</h1>
+     transform: translate(-50%, -50%); text-align: center;" background-color: #8f8f8f;>
+    <h1 style="margin: 3px;">Welcome to AttitudeOS</h1>
     <h2>AttitudeOS is an OS designed to <strong>judge you</strong> for every choice you make.</h2>
     <p>
       Hi, if you've chosen to use this operating system, you will soon change your mind. Though it 
@@ -33,7 +42,7 @@
       if you are a fan of being judged-and you likely are if you're reading this-then this is the perfect OS for you!
       <br>(Currently, this OS is not actually functional, as this is just an html index, but I'm planning)
     </p>
-    <img src="https://lh3.googleusercontent.com/a/ACg8ocI7hfS2818rrOI0cWRRAWYjV8nyi4YfBLTxIAi8xAf0LiOA3nrM=s360-c-no" />
+    <img src="https://lh3.googleusercontent.com/a/ACg8ocI7hfS2818rrOI0cWRRAWYjV8nyi4YfBLTxIAi8xAf0LiOA3nrM=s360-c-no" style="width: 120px; height: 120px; border-radius: 10px; object-fit: cover;" />
     <a href="https://github.com/PendulumPower/AttitudeOS"><br>Github Page</a>
     </div>
   </body>
